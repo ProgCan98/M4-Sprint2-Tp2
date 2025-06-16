@@ -1,22 +1,31 @@
+// Importamos useState y useEffect de React para manejar estado y efectos
 import { useState, useEffect } from 'react';
+// Importamos los componentes Header, MovieList y WatchlistModal
 import Header from '../components/Header';
 import MovieList from '../components/MovieList';
 import WatchlistModal from '../components/WatchlistModal';
+// Importamos el hook useWatchlist para manejar la watchlist
 import useWatchlist from '../hooks/useWatchlist';
 
+// Definimos el componente Home
 function Home() {
+  // Estado para controlar la visibilidad del modal
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // Obtenemos las funciones y estado de watchlist desde el hook
   const { watchlist, addToWatchlist, removeFromWatchlist } = useWatchlist();
+  // Estado para el modo oscuro, inicializado desde localStorage
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem('darkMode');
     return saved ? JSON.parse(saved) : false;
   });
 
+  // Efecto para guardar el modo oscuro en localStorage y togglear la clase dark
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
     document.documentElement.classList.toggle('dark', isDarkMode);
   }, [isDarkMode]);
 
+  // Array de ejemplo con películas
   const movies = [
     {
       id: 1,
@@ -35,6 +44,7 @@ function Home() {
     },
   ];
 
+  // Renderizamos el componente con estructura flex y ajuste de tema
   return (
     <div
       className={`min-h-screen flex flex-col ${
@@ -60,4 +70,5 @@ function Home() {
   );
 }
 
+// Exportamos Home como componente predeterminado
 export default Home;
