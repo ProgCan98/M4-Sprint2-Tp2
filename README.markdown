@@ -7,7 +7,7 @@ Este proyecto es una aplicación web de lista de películas desarrollada con **C
 
 ## Archivos Subidos y su Propósito
 
-### App.jsx
+### App.jsx (1)
 - **Propósito**: Componente principal que sirve como punto de entrada de la aplicación.
 - **Pasos Realizados**:
   1. Importa los estilos globales desde `index.css`.
@@ -16,7 +16,7 @@ Este proyecto es una aplicación web de lista de películas desarrollada con **C
   4. Exporta `App` como componente predeterminado.
 - **Modificaciones**: No se realizaron cambios significativos; se mantuvo como estructura básica.
 
-### MovieCard.jsx
+### MovieCard.jsx (6)
 - **Propósito**: Componente que muestra una tarjeta individual para cada película con imagen, título y botón de agregar.
 - **Pasos Realizados**:
   1. Importa `React` para usar JSX.
@@ -26,7 +26,7 @@ Este proyecto es una aplicación web de lista de películas desarrollada con **C
   5. Exporta el componente.
 - **Modificaciones**: Se añadió `dark:bg-gray-800` al contenedor y `dark:text-white` al título para visibilidad en modo oscuro.
 
-### Header.jsx
+### Header.jsx (4)
 - **Propósito**: Componente que muestra el título y un botón para abrir la watchlist, ahora con un interruptor de tema.
 - **Pasos Realizados**:
   1. Define `Header` que recibe `onOpenWatchlist`, `isDarkMode`, y `setIsDarkMode` como props.
@@ -35,7 +35,7 @@ Este proyecto es una aplicación web de lista de películas desarrollada con **C
   4. Exporta el componente.
 - **Modificaciones**: Se integró el interruptor de modo oscuro y se aseguró `text-white` para visibilidad.
 
-### WatchlistModal.jsx
+### WatchlistModal.jsx (7)
 - **Propósito**: Componente que muestra un modal con la lista de películas guardadas y opciones para eliminarlas.
 - **Pasos Realizados**:
   1. Importa `React` para JSX.
@@ -46,7 +46,7 @@ Este proyecto es una aplicación web de lista de películas desarrollada con **C
   6. Exporta el componente.
 - **Modificaciones**: Se añadió `dark:bg-gray-800` al contenedor y `dark:text-white` a textos para modo oscuro.
 
-### Button.jsx
+### Button.jsx (8)
 - **Propósito**: Componente genérico y reutilizable para botones con estilos personalizables.
 - **Pasos Realizados**:
   1. Define `Button` con props `children`, `onClick`, y `className` opcional.
@@ -55,7 +55,7 @@ Este proyecto es una aplicación web de lista de películas desarrollada con **C
   4. Exporta el componente.
 - **Modificaciones**: No se modificó; se mantuvo como componente reutilizable.
 
-### MovieList.jsx
+### MovieList.jsx (5)
 - **Propósito**: Componente que renderiza una cuadrícula de tarjetas de películas usando `MovieCard`.
 - **Pasos Realizados**:
   1. Importa `MovieCard`.
@@ -65,7 +65,7 @@ Este proyecto es una aplicación web de lista de películas desarrollada con **C
   5. Exporta el componente.
 - **Modificaciones**: Se mejoró la responsividad con `md:grid-cols-3`.
 
-### useWatchlist.js
+### useWatchlist.js (3)
 - **Propósito**: Hook personalizado que gestiona el estado de la watchlist y su persistencia.
 - **Pasos Realizados**:
   1. Importa `useState` y `useEffect` de React.
@@ -77,7 +77,7 @@ Este proyecto es una aplicación web de lista de películas desarrollada con **C
   7. Exporta el hook.
 - **Modificaciones**: Se cambió la inicialización de `watchlist` para cargar desde `localStorage` directamente.
 
-### Home.jsx
+### Home.jsx (2)
 - **Propósito**: Componente principal que integra la lista, el modal y el manejo del tema.
 - **Pasos Realizados**:
   1. Importa `useState`, `useEffect`, y componentes/hoooks necesarios.
@@ -88,7 +88,7 @@ Este proyecto es una aplicación web de lista de películas desarrollada con **C
   6. Exporta el componente.
 - **Modificaciones**: Se añadió manejo de tema y `text-white`/`text-gray-900` para contraste.
 
-### index.css
+### index.css (9)
 - **Propósito**: Archivo de estilos globales con configuración de Tailwind.
 - **Pasos Realizados**:
   1. Incluye `@tailwind base;`, `@tailwind components;`, y `@tailwind utilities;`.
